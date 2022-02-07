@@ -1,0 +1,42 @@
+<div id="upperFrame">
+    <div [ngClass]="{ 'col s7': true }">
+        <!-- <button class="btn btn-danger">Prueba btn</button> -->
+        <div class="navbar">
+            <ul class="navbar-nav row">
+                <li class="nav-item orders col" (click)="showMessage('main')" routerLink="/main" routerLinkActive="active">
+                    <div class="nav-item-icon-orders"><i class="material-icons">view_week</i></div>
+                    <a class="nav-link nav-link-orders" l10nTranslate>Main</a>
+                </li>
+                <li
+                    class="nav-item historic col"
+                    (click)="showMessage('contact')"
+                    routerLink="contact"
+                    routerLinkActive="active"
+                >
+                    <div class="nav-item-icon">
+                        <i class="material-icons">where_to_vote</i>
+                    </div>
+                    <a class="nav-link" l10nTranslate
+                        >Contact
+                    </a>
+                </li>
+                <li
+                    class="nav-item historic col"
+                    (click)="showMessage('contact')"
+                    routerLink="about-me"
+                    routerLinkActive="active"
+                >
+                    <div class="nav-item-icon">
+                        <i class="material-icons">where_to_vote</i>
+                    </div>
+                    <a class="nav-link" l10nTranslate
+                        >Contact
+                    </a>
+                </li>
+            </ul>
+            <!-- <div [ngClass]="color + ' line'"></div> -->
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
